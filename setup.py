@@ -8,8 +8,8 @@ import subprocess
 
 def create_parser():
     parser = argparse.ArgumentParser(description='Setup the directory structure for SOMA')
-    parser.add_argument('folder_name', metavar='FOLDER', type=str, help='Custom folder name for this experiment',)
-    parser.add_argument('studies_path', metavar='PATH', type=str, help='The path to S: from your device',)
+    parser.add_argument('-folder_name', type=str, help='Custom folder name for this experiment',)
+    parser.add_argument('--studies_path', type=str, help='The path to S: from your device', default='/mnt/S/')
     return parser
 
 def setup(args):
