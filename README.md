@@ -10,11 +10,9 @@
 
 4. `conda activate soma`
 
-5. Run `python setup.py --folder_name='<custom-folder-name>' --studies_path='<path-to-S:>'`
+5. Run `python setup.py --studies_path='<path-to-S:>'`. The default Studies path is `/mnt/S`.
 
-6. Running `setup.py` will create a new folder called `<custom-folder-name>`, and will copy the scripts `label_mocaps.py` and `mosh_labeled_mocaps.py` into this custom folder. As setup is now complete, all following code and work should be done in our experiment folder.
-
-7. `cd <custom-folder-name>`
+6. Setup will copy all necessary assets into the current folder. The next step is to set up the conda environment. Follow the instructions in the `conda-env.md` file.
 
 ## Auto-labelling unlabeled mocaps
 
