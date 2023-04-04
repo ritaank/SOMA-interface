@@ -41,7 +41,8 @@ def get_soma_conf_file():
 
 def solve_labels(args):
     '''
-    For given folder, labels each mocap and outputs results into training_experiments folder
+    For given folder, labels each mocap using the trained SuperSet (89 points).
+    Outputs results into training_experiments folder.
     '''
 
     soma_work_base_dir = os.getcwd()

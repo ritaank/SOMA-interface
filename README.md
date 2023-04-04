@@ -6,13 +6,15 @@
 
 2. `cd SOMA-setup`
 
-3. Set up the conda environment `soma` with necessary dependencies (follow steps **here** (TODO)). Install necessary packages directly into the `SOMA-setup folder`.
+3. Run `python setup.py --studies_path='<path-to-S:>'`. The default Studies path is `/mnt/S`.
 
-4. `conda activate soma`
+4. Set up the conda environment `soma` with necessary dependencies follow the steps in [`conda-env.md`](conda-env.md).
 
-5. Run `python setup.py --studies_path='<path-to-S:>'`. The default Studies path is `/mnt/S`.
+5. Zipped archives can be deleted: `rm -rf bpy-2.83-20200908.tar.bz2 smpl-fast-derivatives.tar.bz2` 
 
-6. Setup will copy all necessary assets into the current folder. The next step is to set up the conda environment. Follow the instructions in the `conda-env.md` file.
+6. `conda activate soma`
+
+7. Setup will copy all necessary assets into the current folder. The next step is to set up the conda environment. Follow the instructions in the `conda-env.md` file.
 
 ## Auto-labelling unlabeled mocaps
 
