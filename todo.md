@@ -1,7 +1,7 @@
 ## for SOMA
 - clean up SOMA process TODOs
   - what does OC_05_G_03_real_000_synt_100 mean?
-  - change cwd as needed
+  - DONE change cwd as needed
 - set up soma-root so there is a template default set of mocaps which we can label and compare fiat labels to
 - add bit about Mokka to visualize since normal visualization tools cannot process the c3d
 - add a bit/script to move the files into the right place for mosh

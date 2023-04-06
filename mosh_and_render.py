@@ -1,3 +1,4 @@
+import os
 import os.path as osp
 from glob import glob
 
@@ -5,7 +6,7 @@ from loguru import logger
 
 from soma.amass.mosh_manual import mosh_manual
 
-soma_work_base_dir = '/home/ritaank/Documents/dev/motion_synthesis/soma-experiments/soma_experiment_1'
+soma_work_base_dir = osp.join(os.getcwd(), 'soma-root') 
 support_base_dir = osp.join(soma_work_base_dir, 'support_files')
 
 mocap_base_dir = osp.join(support_base_dir, 'evaluation_mocaps/original')
@@ -15,28 +16,25 @@ temp_base_dir = osp.join(support_base_dir, 'render_out_temp')
 
 target_ds_names = ['immersion_tiny',]
 
-# def select(fname):
-#     if "Woman" in fname or "London_001" in fname or "FootworkPlusLunge" in fname:
-#         return True
-#     return False
-
-def select2(fname):
-    if "Amelia" in fname:
-        return True
-    return False
+def select(fname):
+    '''
+    Running MoSH takes time, so a filter can be applied if only a subset of mocaps is needed.
+    '''
+    # add filters here
+    return True
 
 for ds_name in target_ds_names:
     mocap_fnames = glob(osp.join(mocap_base_dir, ds_name,  '*/*.c3d'))
 
-    mocap_fnames = list(filter(select2, mocap_fnames))
+    mocap_fnames = list(filter(select, mocap_fnames))
     print(mocap_fnames)
 
     logger.info(f'#mocaps found for {ds_name}: {len(mocap_fnames)}')
-    # raise AssertionError
+
     mosh_manual(
         mocap_fnames,
         mosh_cfg={
-            'moshpp.verbosity': 1, # set to 2 to visulaize the process in meshviewer
+            'moshpp.verbosity': 1, # set to 2 to visualize the process in meshviewer
             'dirs.work_base_dir': osp.join(work_base_dir, 'mosh_results'),
             'dirs.support_base_dir': support_base_dir,
             'mosh_stagei_perseq': True,
