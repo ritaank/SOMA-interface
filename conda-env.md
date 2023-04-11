@@ -58,9 +58,11 @@ or on macOS:
 
 `brew install boost`
 
-TODO: show how to find Boost include. Then, install using the makefile:
+On Linux, the path to boost include should be `usr/include/boost` Then, install using the makefile:
 
-`BOOST_INCLUDE_DIRS=/path/to/boost/include make all`
+`BOOST_INCLUDE_DIRS=/usr/include/boost make all` (or the path to boost include on your machine)
+
+If there are issues in installing the mesh library, please refer to the links in this [issue](https://github.com/nghorbani/soma/issues/21).
 
 Finally, install the python package:
 

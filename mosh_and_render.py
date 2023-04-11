@@ -24,7 +24,9 @@ def select(fname):
     return True
 
 for ds_name in target_ds_names:
+    print(mocap_base_dir)
     mocap_fnames = glob(osp.join(mocap_base_dir, ds_name,  '*/*.c3d'))
+    print(mocap_fnames)
 
     mocap_fnames = list(filter(select, mocap_fnames))
     print(mocap_fnames)
@@ -60,7 +62,7 @@ for ds_name in target_ds_names:
         },
         parallel_cfg={
             'pool_size': 5,
-            # 'max_num_jobs': 1,
+            'max_num_jobs': 1,
             'randomly_run_jobs': True,
         },
         run_tasks=[

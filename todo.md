@@ -22,3 +22,8 @@
 - likewise for mosh paper
 - can we use parallel tools in python to parallelize the func(job) for loop that happens in parallel tools?
 - can we use Numba to speed things up? do some tests on this?
+- The full tutorial moshes directly from output of SOMA -- lets change our functions to pull right from folder
+- One subfolder per subject/markerlayout
+- settings.json with the gender of the body model
+- can visualize mesh directly in Jupyter, let us encode this
+- need to run rendering for the other data in the Immersion set
