@@ -87,7 +87,7 @@ def solve_labels(args):
 def create_parser():
     parser = argparse.ArgumentParser(description='Settings for a SOMA labelling run')
     parser.add_argument('-data_source', type=str, help='The name of the folder of the unlabeled mocap data',)
-    parser.add_argument('--subject_name', type=str, help='the name of the subject', default="SubjectA")
+    parser.add_argument('--subject_name', type=str, help='the name of the subject')#default="SubjectA")
     return parser
 
 if __name__ == "__main__":
