@@ -14,7 +14,7 @@ mocap_base_dir = osp.join(support_base_dir, 'evaluation_mocaps/original')
 work_base_dir = osp.join(soma_work_base_dir, 'running_just_mosh')
 temp_base_dir = osp.join(support_base_dir, 'render_out_temp')
 
-target_ds_names = ['immersion_tiny',]
+target_ds_names = ['fsp02',]
 
 def select(fname):
     '''
@@ -45,8 +45,8 @@ for ds_name in target_ds_names:
         
             'moshpp.verbosity': 1, # set to 2 to visulaize the process in meshviewer
             # 'render.render_only_one_image': True, # uncomment for initial testing of the pipeline
-            'render.video_fps': 60,  # 25, #video_fps * ds_rate should equal the sample fps always
-            'mesh.ds_rate': 4,
+            'render.video_fps': 30,  # 25, #video_fps * ds_rate should equal the sample fps always
+            'mesh.ds_rate': 8,
             'render.resolution.change_from_blend': True,
             'render.resolution.default': [1600, 1600],  # [x,y]
             'render.render_engine': 'eevee',  # eevee / cycles,
@@ -62,12 +62,12 @@ for ds_name in target_ds_names:
         },
         parallel_cfg={
             'pool_size': 5,
-            'max_num_jobs': 1,
+            # 'max_num_jobs': 1,
             'randomly_run_jobs': True,
         },
         run_tasks=[
-            'mosh',
-            # 'render',
+            # 'mosh',
+            'render',
         ],
         fast_dev_run=False,
     )
