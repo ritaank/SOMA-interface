@@ -7,10 +7,7 @@
 3. Run `python setup.py --studies_path='<path-to-S:>'`. The default path to the Studies drive is `/mnt/S`. If on WSL2, the Studies drive must be mounted in the WSL2 environment. TODO: write instructions on how to mount network drives.
 4. Running the above code copies in necessary dependencies into your `SOMA-interface` folder, including a large `soma-root` folder.
 5. Set up the conda environment `soma` with all necessary dependencies. Follow the steps in [`conda-env.md`](conda-env.md).
-6. Zipped archives can be deleted: `rm -rf bpy-2.83-20200908.tar.bz2 smpl-fast-derivatives.tar.bz2` 
-7. `conda activate soma`
-
-
+6. `conda activate soma`
 
 ## Auto-labelling unlabeled mocaps
 
