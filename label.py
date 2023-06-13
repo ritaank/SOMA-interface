@@ -32,8 +32,8 @@ def get_soma_conf_file():
     '''
     import soma
     init_path = osp.join(soma.__file__)
-    base_path = osp.dirname(init_path)
-    conf_path = osp.join(base_path, 'conf', 'soma_run_path.yaml')
+    base_path = osp.dirname(osp.dirname(osp.dirname((init_path))))
+    conf_path = osp.join(base_path, 'support_data', 'conf', 'soma_run_conf.yaml')
 
     print(conf_path)
     return conf_path
